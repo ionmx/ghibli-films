@@ -8,7 +8,10 @@ class Film extends Component {
     test: ''
   }
   render() {
-  	var divStyle = { backgroundImage: 'url(' + this.props.film.backdrop + ')' };
+    if (!this.props.film) {
+      return <Redirect push to='/' />;
+    }
+    var divStyle = { backgroundImage: 'url(' + this.props.film.backdrop + ')' };
     return (
       <div className="film-complete" style={divStyle}>
         <div className="film-complete-inner">
