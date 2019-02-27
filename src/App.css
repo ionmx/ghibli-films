@@ -1,0 +1,25 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 48px;
+  margin: 0 24px;
+  pointer-events: none;
+  filter: invert(100%);
+  float: left;
+}
+
+.App-header {
+  background-color: #64b5f6;
+  min-height: 48px;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: fixed;
+  width: 100vw;
+}
+
+.App-main {
+}

@@ -1,0 +1,38 @@
+.film-complete {
+  height: 100vh;
+  background-size: cover;
+  padding-top: 48px;
+}
+
+.film-complete-inner {
+  padding: 48px;
+  height: calc(100vh - 96px);
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+
+}
+
+.film-complete-poster {
+  padding-right: 2em;
+}
+
+.film-complete-poster .film-poster {
+  width: 25vw;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.film-complete-inner h1 {
+  color: #fafafa;
+}
+
+.film-complete-inner p {
+  color: #eee;
+}
+
+.return-link {
+  text-align: right;
+}
+.return-link a {
+  color: #fff;
+  font-size: 80%;
+}

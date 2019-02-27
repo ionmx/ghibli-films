@@ -1,0 +1,29 @@
+.films {
+  padding: 64px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.film {
+  width: 180px;
+  background-color: #111;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.film a {
+  text-decoration: none;
+}
+
+.film-poster {
+  width: 180px;
+}
+
+.film-title {
+  color: #fff;
+  font-size: 80%;
+  font-weight: bold;
+  padding: 10px;
+}
