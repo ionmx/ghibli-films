@@ -14,7 +14,7 @@ const MOVIEDB_QUERY = "https://api.themoviedb.org/3/search/movie?api_key=77d33f9
 class App extends Component {
 
   state = {
-    isLoaded: false,
+    loading: true,
     films: [],
   }
 
@@ -29,15 +29,14 @@ class App extends Component {
             return film;
           })
           this.setState({
-            isLoaded: true,
+            loading: false,
             films: films
           });
           films.map((film, index) => {
-            film.poster = '/poster.png';
             fetch(MOVIEDB_QUERY + film.title)
               .then(response => response.json())
               .then(response_moviedb => {
-                if (response_moviedb.results.length > 0){ 
+                if (response_moviedb.results.length > 0) { 
                   var sel_movie = response_moviedb.results.find(function(el) {
                     return el.original_language === 'ja'; 
                   });
@@ -51,7 +50,7 @@ class App extends Component {
         },
         (error) => {
           this.setState({
-            isLoaded: true,
+            loading: false,
             error
           });
         }
@@ -63,16 +62,21 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <div className="App-main">
-            <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <SearchForm films={this.state.films} router={this.context.router} />
-            </header>
-            <Switch>
-              <Route exact path="/" render={(props) => <FilmList films={this.state.films} {...props} /> }  />
-              <Route exact path="/:shortname" render={(props) => <Film film={this.state.films.find(f => f.shortname === props.match.params.shortname)} {...props} /> }  />
-            </Switch>
-          </div>
+          { this.state.loading? (
+              <div className="App-loading">Loading...</div>
+            ) : (
+              <div className="App-main">
+                <header className="App-header">
+                  <img src={logo} className="App-logo" alt="logo" />
+                  <SearchForm films={this.state.films} router={this.context.router} />
+                </header>
+                <Switch>
+                  <Route exact path="/" render={(props) => <FilmList films={this.state.films} {...props} /> }  />
+                  <Route exact path="/:shortname" render={(props) => <Film film={this.state.films.find(f => f.shortname === props.match.params.shortname)} {...props} /> }  />
+                </Switch>
+              </div>
+            )
+          }
         </Router>
         
       </div>

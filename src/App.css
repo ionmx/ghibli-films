@@ -23,3 +23,42 @@
 
 .App-main {
 }
+
+.App-loading {
+  height: 100vh;
+  width: 100vw;
+  background: #64b5f6;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 5vw;
+  -webkit-animation: color_change 1s infinite alternate;
+  -moz-animation: color_change 1s infinite alternate;
+  -ms-animation: color_change 1s infinite alternate;
+  -o-animation: color_change 1s infinite alternate;
+  animation: color_change 1s infinite alternate;
+}
+
+@-webkit-keyframes color_change {
+ from { color: #fff; }
+ to { color: #64b5f6; }
+}
+@-moz-keyframes color_change {
+ from { color: #fff; }
+ to { color: #64b5f6; }
+}
+@-ms-keyframes color_change {
+ from { color: #fff; }
+ to { color: #64b5f6; }
+}
+@-o-keyframes color_change {
+ from { color: #fff; }
+ to { color: #64b5f6; }
+}
+@keyframes color_change {
+ from { color: #fff; }
+ to { color: #64b5f6; }
+}
