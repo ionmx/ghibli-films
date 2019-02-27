@@ -27,7 +27,7 @@ class SearchForm extends Component {
           onSelect={(value, item) => {
             this.setState({ redirect_to: item.shortname });
             this.setState({ redirect: true  })
-            this.setState({ value })
+            this.setState({ value: '' })
           }}
           onChange={(event, value) => {
             this.setState({ matched_films: this.props.films.filter(film => film.title.toLowerCase().indexOf(value.toLowerCase()) !== -1) })
