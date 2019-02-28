@@ -38,3 +38,17 @@
   color: #fff;
   font-size: 80%;
 }
+
+@media only screen and (max-width: 600px) {
+  .film-complete-inner {
+    padding: 48px 32px 200px 32px;
+    display: block;
+  }
+  .film-complete-poster {
+    padding: 0;
+    text-align: center;
+  }
+  .film-complete-poster .film-poster {
+    width: 40vw;
+  }
+}
