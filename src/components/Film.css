@@ -2,14 +2,16 @@
   height: 100vh;
   background-size: cover;
   padding-top: 48px;
+  position: fixed;
+  z-index: 99;
+  overflow-y: auto;
 }
 
 .film-complete-inner {
-  padding: 48px;
+  padding: 48px 48px 200px 48px;
   height: calc(100vh - 96px);
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-
 }
 
 .film-complete-poster {

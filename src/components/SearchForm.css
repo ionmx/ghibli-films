@@ -57,3 +57,12 @@
   font-weight: bold;
 }
 
+@media only screen and (max-width: 600px) {
+  .search-img { 
+    display: none;
+  }
+  .search-title {
+    padding: 5px;
+  }
+}
+
